@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinayak website</title>
+    <title>Html learning website</title>
     <!-- link for css file -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,14 +20,14 @@
 
     <!-- Image tag -->
     <img src="" alt="" srcset="">
-
+    <h3>Tabel in Html</h3>
     <!-- Table -->
     <table>
         <caption>Table caption</caption>
         <thead>
             <tr>
                 <th>column 1</th>
-                <th>column 2</th>
+                <th>column 2</thx>
                 <th>column 3</th>
             </tr>
         </thead>
@@ -48,6 +48,7 @@
     <!-- roespan when a row want to more then one coluns -->
 
     <!-- list - order list , unorder list and define list -->
+    <h3>List in HTML</h3>
     <ol type="A">
         <li>first</li>
         <li>Second</li>
@@ -65,6 +66,59 @@
         <dt>Defination term</dt>
         <dd>Defination data</dd>
     </dl>
+
+    <!-- Form -->
+    <h3>Form in Html</h3>
+    <form action="">
+        <!-- text input -->
+        <div>
+            <label for="name">Name : </label>
+            <input type="text" id="name" placeholder="Enter your username">
+        </div>
+
+        <!-- radio button -->
+        <div>
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label>
+        </div>
+
+        <!-- textarea -->
+        <div>
+            <label for="feedback">Feedback</label>
+            <textarea name="feedback" id="feedback" placeholder="Enter ur feedback"></textarea>
+        </div>
+
+        <!-- option -->
+        <div>
+            <select name="gender" id="selectoption">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+    </form>
+
+    <!-- inline and block element -->
+    <!-- inline element - only took require space on web page -->
+    <!-- block element - require whole space on web page -->
+
+    <!-- Audio , video and media -->
+
+    <!-- video -->
+    <video src="" controls autoplay loop muted poster=""></video>
+    <!-- controls - give control
+      loop - run the video in loop
+      muted - mute the video by default
+      poster - thumnaile for video -->
+    
+    <br>
+
+    <!-- audio -->
+    <label for="audio">Song : </label>
+    <audio src="" id="audio" ></audio>
+
     <!-- script tag connect js file with html -->
     <script src="script.js"></script>
 
