@@ -1,0 +1,98 @@
+/* selector in css  */
+
+/* element selector */
+div {
+    background-color: grey;
+}
+
+/* class slector */
+.div {
+    background-color: grey;
+}
+
+/* id selector */
+#div {
+    background-color: red;
+}
+
+/* child selector */
+div>p {
+    background-color: red;
+}
+
+/* desecndant selector */
+div p {
+    background-color: yellow;
+}
+
+/* pseudo selector */
+p:hover {
+    background-color: violet;
+}
+
+/* Universal selector */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* border box */
+/* height = content + top + low padding + top + low border + top + low margin
+after applying border box total height = content + top + low padding + top + low border  */
+/* margin colapse = happen when two box margin collapse each over in this case higest margin will set */
+.div2 {
+    box-sizing: border-box;
+}
+
+/* font */
+/* we can import font online and we can use some font property to enhance our font */
+
+.div2 {
+    font-family: "Caveat", cursive;
+    font-size: 35px;
+    font-weight: 500;
+    /* font-style: italic; */
+    /* line height -  use for changing the gape height between lines */
+    /* letter height - use for setting the gape between letter */
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    text-align: center;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+/* color */
+.colordiv {
+    /* we can set color in ways (mostly color name and hex color used in industry) */
+    color: red;
+    color: #ab4630;
+    color: rgb(red, green, blue);
+    color: rgba(red, green, blue, alpha);
+    color: hsl(hue, saturation, lightness);
+    color: hsla(hue, saturation, lightness, alpha);
+}
+
+/* CSS sepcificity */
+/* 
+1. postion and order apperenace - selector is same whoever comens in end will be slected
+2. specifity - inline css > id > class or attribute or pseudo > element selector > universal selector (always try to use lower speifity selector first)
+3. origin - user agent stylesheet (apply by the browser)
+4. importance - use !impportant (!important > inline css) color : blue !important;
+ */
+ /* 
+ Specificity Calculation
+
+To calculate specificity, assign a value to each part of the selector:
+
+    Universal Selector: 0
+    Element selectors and pseudo-elements: 1
+    Class selectors, attribute selectors, and pseudo-classes: 10
+    ID selectors: 100
+    Inline styles: 1000
+
+Then, add up the values of all the parts in the selector.
+ */
+
