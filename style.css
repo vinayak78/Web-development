@@ -40,7 +40,7 @@ p:hover {
 /* height = content + top + low padding + top + low border + top + low margin
 after applying border box total height = content + top + low padding + top + low border  */
 /* margin colapse = happen when two box margin collapse each over in this case higest margin will set */
-.font-div{
+.font-div {
     box-sizing: border-box;
 }
 
@@ -133,7 +133,7 @@ min , max - height , width
 /* display - none and visiblity- hidden */
 /* .box2 {
    /* display: none; space as well content will disapear*/
-   /* visibility: hidden; space will not disapear    
+/* visibility: hidden; space will not disapear    
 } */
 
 /* shadows abnd text shadows */
@@ -151,46 +151,120 @@ v-offset -	How far the shadow moves vertically (↓)
 blur-radius	(Optional) - how blurry the shadow is
 color	- Shadow color (name, rgb(), rgba(), etc.)
 */
-.shadow-box{
-    border : 2px solid red;
+.shadow-box {
+    border: 2px solid red;
     height: 30vh;
     width: 30vh;
     margin: auto;
     text-align: center;
 }
-.shadow-box:hover{
-     box-shadow: 4px 5px 7px 2px pink;
-     text-shadow: 2px 2px 2px pink;
+
+.shadow-box:hover {
+    box-shadow: 4px 5px 7px 2px pink;
+    text-shadow: 2px 2px 2px pink;
 }
 
 /* styling list */
 /* list iteam is one of the imprtant list iteam to use i nav */
-.styling-list{
+.styling-list {
     /* to remove the mark
     /* list-style: none; */
-    display: inline;   
+    display: inline;
     /* include the marker inside  */
-    list-style-position: inside; 
+    list-style-position: inside;
 
 }
-.styling-list:hover::before{
+
+.styling-list:hover::before {
     content: "😁";
 }
+
 /* short hand for list style -> list-style: type position image; */
 
 
 /* overflow */
 /* we use over flow to reduce the risk of text overflow  */
-.over-flow{
+.over-flow {
     height: 25vh;
     width: 25vw;
     border: 2px solid black;
     /* Mainly use this */
-    overflow: auto; 
+    overflow: auto;
     /* overflow: scroll; */
     /* overflow: hidden; */
     /* text-overflow: clip; */
 }
 
 /* position property */
+/* 
+there are four postion in css 
+position - static; (by default)
+position - realtive; (we can use top bottom left right and z-index)
+position - absolute; (break the flow of web (relative to the root tag if the parent tag have postion set then relative to parent))
+position - fixed (fixed position on web port)
+position - sticjy (stick during scrolling)
+*/
+/* 
+Exception : Transform , filter or perspective can also make an element appear as positioned
+*/
+.postion_parent {
+    border: 2px solid purple;
+    width: 80vw;
+    height: 80vh;
+    position: relative;
+}
 
+.postiondiv {
+    border: 2px solid black;
+    width: 50vw;
+    height: 10vh;
+    margin: 10px;
+    padding: 20px;
+}
+
+.positondiv1 {
+    background-color: red;
+    /* position: relative; */
+
+}
+
+.positondiv2 {
+    background-color: green;
+    /* position: absolute; */
+    /* top: 0px; */
+}
+
+.positondiv3 {
+    background-color: blue;
+    /* position: sticky; */
+    /* bottom: 0px; */
+}
+
+.positondiv4 {
+    background-color: yellow;
+    /* position: fixed; */
+    /* top: 0px; */
+}
+
+
+/* CSS variable */
+/* variable can store values that can be use in property */
+/* Global declaration */
+:root {
+    --color: blue;
+    --seccolor: green;
+    --opasity: 0.5;
+    --zindex: 1;
+    --dfheight : 350px;
+    --dfwidth : 350px;
+}
+.variable_div {
+    /* local declaration */
+    /* --color: white; */
+    color: var(--color, yellow);
+    background-color: var(--seccolor, red);
+    opacity: var(--opasity, 1);
+    z-index: var(--zindex);
+    height: var(--dfheight);
+    width: var(--dfwidth);
+}
