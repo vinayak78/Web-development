@@ -1,9 +1,9 @@
 /* selector in css  */
 
 /* element selector */
-div {
+/* div {
     background-color: grey;
-}
+} */
 
 /* class slector */
 .div {
@@ -40,14 +40,14 @@ p:hover {
 /* height = content + top + low padding + top + low border + top + low margin
 after applying border box total height = content + top + low padding + top + low border  */
 /* margin colapse = happen when two box margin collapse each over in this case higest margin will set */
-.div2 {
+.font-div{
     box-sizing: border-box;
 }
 
 /* font */
 /* we can import font online and we can use some font property to enhance our font */
 
-.div2 {
+.font-div {
     font-family: "Caveat", cursive;
     font-size: 35px;
     font-weight: 500;
@@ -82,7 +82,7 @@ after applying border box total height = content + top + low padding + top + low
 3. origin - user agent stylesheet (apply by the browser)
 4. importance - use !impportant (!important > inline css) color : blue !important;
  */
- /* 
+/* 
  Specificity Calculation
 
 To calculate specificity, assign a value to each part of the selector:
@@ -95,4 +95,102 @@ To calculate specificity, assign a value to each part of the selector:
 
 Then, add up the values of all the parts in the selector.
  */
+
+/*
+Size unit - px , vh , vw , em , rem
+px - 12px , 45px.
+vh - view port height.
+vw - view poet width.
+em - relativw to the parent element.
+rem - relative to the root element.
+% - relative to the parent 
+min , max - height , width 
+*/
+
+/* CSS display property */
+/* we have inline and block elemeent in html but we can change there property by inline and block property  */
+
+/* the margin top and width property does not work on displey :inline in this case we use inline-block  */
+
+.box1 {
+    border: 2px solid red;
+    /* display: inline; */
+    display: inline-block;
+}
+
+.box2 {
+    border: 2px solid blue;
+    /* display: inline; */
+    display: inline-block;
+}
+
+.box3 {
+    border: 2px solid green;
+    /* display: inline; */
+    display: inline-block;
+}
+
+/* display - none and visiblity- hidden */
+/* .box2 {
+   /* display: none; space as well content will disapear*/
+   /* visibility: hidden; space will not disapear    
+} */
+
+/* shadows abnd text shadows */
+/*
+syntax box-shadow : h-offset v-offset blur spread color; 
+h-offset = horizontal shadow
+v-offset = vertical shadow
+blur = blur radius
+spread = size of the shadow
+color = color of the shadow
+
+syntax text-shadow : h-offset v-offset blur-radius color;
+h-offset -	How far the shadow moves horizontally (→)
+v-offset -	How far the shadow moves vertically (↓)
+blur-radius	(Optional) - how blurry the shadow is
+color	- Shadow color (name, rgb(), rgba(), etc.)
+*/
+.shadow-box{
+    border : 2px solid red;
+    height: 30vh;
+    width: 30vh;
+    margin: auto;
+    text-align: center;
+}
+.shadow-box:hover{
+     box-shadow: 4px 5px 7px 2px pink;
+     text-shadow: 2px 2px 2px pink;
+}
+
+/* styling list */
+/* list iteam is one of the imprtant list iteam to use i nav */
+.styling-list{
+    /* to remove the mark
+    /* list-style: none; */
+    display: inline;   
+    /* include the marker inside  */
+    list-style-position: inside; 
+
+}
+.styling-list:hover::before{
+    content: "😁";
+}
+/* short hand for list style -> list-style: type position image; */
+
+
+/* overflow */
+/* we use over flow to reduce the risk of text overflow  */
+.over-flow{
+    height: 25vh;
+    width: 25vw;
+    border: 2px solid black;
+    /* Mainly use this */
+    overflow: auto; 
+    /* overflow: scroll; */
+    /* overflow: hidden; */
+    /* text-overflow: clip; */
+}
+
+/* position property */
 
