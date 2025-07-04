@@ -268,3 +268,12 @@ Exception : Transform , filter or perspective can also make an element appear as
     height: var(--dfheight);
     width: var(--dfwidth);
 }
+
+
+/* Media query */
+/* we use media queries for responsive background */
+@media only screen and (max-width : 455px){
+    body{
+        background-color: blue;
+    }
+}
