@@ -106,7 +106,6 @@ rem - relative to the root element.
 % - relative to the parent 
 min , max - height , width 
 */
-
 /* CSS display property */
 /* we have inline and block elemeent in html but we can change there property by inline and block property  */
 
@@ -271,9 +270,20 @@ Exception : Transform , filter or perspective can also make an element appear as
 
 
 /* Media query */
+/*
+synatx:-
+@media not/only mediatype and (esxpress){
+    CSS-code;
+} 
+*/
 /* we use media queries for responsive background */
 @media only screen and (max-width : 455px){
     body{
         background-color: blue;
+    }
+}
+@media screen and (orientation : landscape ){
+   .variable_div{
+        border : 2px solid red;
     }
 }
