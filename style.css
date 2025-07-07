@@ -287,3 +287,60 @@ synatx:-
         border : 2px solid red;
     }
 }
+
+
+/* CSS float and clear */
+/* Float and clear not longer use in mordern wwebsite but we need to know them */
+/* float -  object can float on right left 
+clear - object dont allow any one to take place in his right left both */
+.cards{
+    border: 2px solid black;
+    display: flow-root;
+}
+.card{
+    border : 2px solid blue;
+}
+.cards :nth-child(1) {
+    float: left;
+    /* float: right; */
+}
+.cards :nth-child(2){
+    clear: right;
+}
+
+/* more CSS selector  */
+.selectordiv{
+    border: 2px solid black;
+}
+.selector-boxes:first-child{
+    background-color: red;
+}
+.selectordiv *{
+    border: 2px solid green;
+}
+[data-color = "primary"]{
+    margin-top: 45px;
+}
+.selector-boxes:nth-child(even) {
+    background-color: yellow;
+}
+.selector-boxes:nth-last-child(1){
+    background-color: aqua;
+}
+/* pseudo element */
+.selectordiv::before{
+    content: "Hello ji";
+}
+.selectordiv::selection{
+    color: red;
+    background-color: white;
+}
+.selectordiv::first-line{
+    color: yellow;
+}
+.selector-boxes::first-letter{
+    color:peru;
+}
+.selectordiv > input::placeholder{
+    color:green;
+}
