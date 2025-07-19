@@ -254,9 +254,10 @@ Exception : Transform , filter or perspective can also make an element appear as
     --seccolor: green;
     --opasity: 0.5;
     --zindex: 1;
-    --dfheight : 350px;
-    --dfwidth : 350px;
+    --dfheight: 350px;
+    --dfwidth: 350px;
 }
+
 .variable_div {
     /* local declaration */
     /* --color: white; */
@@ -277,14 +278,15 @@ synatx:-
 } 
 */
 /* we use media queries for responsive background */
-@media only screen and (max-width : 455px){
-    body{
+@media only screen and (max-width : 455px) {
+    body {
         background-color: blue;
     }
 }
-@media screen and (orientation : landscape ){
-   .variable_div{
-        border : 2px solid red;
+
+@media screen and (orientation : landscape) {
+    .variable_div {
+        border: 2px solid red;
     }
 }
 
@@ -293,54 +295,104 @@ synatx:-
 /* Float and clear not longer use in mordern wwebsite but we need to know them */
 /* float -  object can float on right left 
 clear - object dont allow any one to take place in his right left both */
-.cards{
+.cards {
     border: 2px solid black;
     display: flow-root;
 }
-.card{
-    border : 2px solid blue;
+
+.card {
+    border: 2px solid blue;
 }
+
 .cards :nth-child(1) {
     float: left;
     /* float: right; */
 }
-.cards :nth-child(2){
+
+.cards :nth-child(2) {
     clear: right;
 }
 
 /* more CSS selector  */
-.selectordiv{
+.selectordiv {
     border: 2px solid black;
 }
-.selector-boxes:first-child{
+
+.selector-boxes:first-child {
     background-color: red;
 }
-.selectordiv *{
+
+.selectordiv * {
     border: 2px solid green;
 }
-[data-color = "primary"]{
+
+[data-color="primary"] {
     margin-top: 45px;
 }
+
 .selector-boxes:nth-child(even) {
     background-color: yellow;
 }
-.selector-boxes:nth-last-child(1){
+
+.selector-boxes:nth-last-child(1) {
     background-color: aqua;
 }
+
 /* pseudo element */
-.selectordiv::before{
+.selectordiv::before {
     content: "Hello ji";
 }
-.selectordiv::selection{
+
+.selectordiv::selection {
     color: red;
     background-color: white;
 }
-.selectordiv::first-line{
+
+.selectordiv::first-line {
     color: yellow;
 }
-.selector-boxes::first-letter{
-    color:peru;
+
+.selector-boxes::first-letter {
+    color: peru;
 }
-.selectordiv > input::placeholder{
-    color:green;
+
+.selectordiv>input::placeholder {
+    color: green;
+}
+
+/*  Flex box */
+/* Flex box use for centering the content or moving them as per dev requirment 
+Justify content property - algn iteam center in main axes (flkex direction)
+align -iteam -> algin iteam center cros axis
+*/
+
+.container {
+    height: 20vh;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column;  change the by default left to right flex direction to dev requirment */
+
+    /*Wrap use when content got out of container to wrap them all  */
+    flex-wrap: wrap; 
+
+    /* use when we have multiple lines (content)  */
+    align-content: center;
+
+
+    /*  <'flex-direction'> || <'flex-wrap'> */
+    flex-flow: row wrap;
+
+    gap : 5px;
+    /* Sort hand for gap */
+    gap : 5px 6px; 
+}
+
+.iteam {
+    height: 35px;
+    width: 35px;
+    background-color: darkblue;
+    border: 2px solid white;
+    /* margin: 5px; */
 }
