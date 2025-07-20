@@ -395,4 +395,17 @@ align -iteam -> algin iteam center cros axis
     background-color: darkblue;
     border: 2px solid white;
     /* margin: 5px; */
+
+    /* distribute equal width to content */
+    flex-grow: 1;
+
+    /* shrink if window get small */
+    flex-shrink: 2;
+
 }
+.iteam1{
+    flex-grow: 2;
+    align-self: flex-start;
+}
+
+/* CSS gridj */
