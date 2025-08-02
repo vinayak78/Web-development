@@ -452,3 +452,38 @@ align -iteam -> algin iteam center cros axis
 
     grid-row: first-column / last-column; */
 }
+
+/* Different way of using grid */
+/* Grid templete area */
+.grid-template-container{
+    background-color: bisque;
+    border: 2px solid black;
+    height: 40vh;
+    display: grid;
+    grid-template-areas:"nav nav nav"
+                        "side article article"
+                        "footer footer footer";
+}
+.template-iteam{
+background-color: cornsilk;
+/* height: 20px */
+/* width: 50px; */
+border: 2px solid red;
+}   
+
+.area-1{
+    grid-area: nav;
+    background-color: red;
+}
+.area-2{
+    grid-area: side;
+    background-color: green;
+}
+.area-3{
+grid-area: article;
+background-color: aqua;
+}
+.area-4{
+    grid-area: footer;
+    background-color: blueviolet;
+}
