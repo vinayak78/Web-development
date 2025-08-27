@@ -548,3 +548,27 @@ align -iteam -> algin iteam center cros axis
     /* transform-origin: -50% -50%;
     transform: rotate(40deg); */
 }
+
+/* CSS transition */
+
+.css_translation{
+    background-color: antiquewhite;
+    height: 50vh;
+    width: 60vw;
+}
+.transaltion_button{
+    background-color: red;
+    height: 5vh;
+    width: 6vw;
+    /* transition: transform; */
+    transition: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1ms;
+}
+.translate{
+    transform: translateX(50%) translateY(50%);
+    background-color: brown;
+}
+
+/* CSS animation */
