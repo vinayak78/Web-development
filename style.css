@@ -528,7 +528,7 @@ align -iteam -> algin iteam center cros axis
     transform: scaleY(1.4);
     transform: scaleZ(1.6);
     transform: scale3d(1.8); */
-    
+
     /* skew (strench from corners */
     /* transform: skew(5deg);
     transform: skewX(5deg);
@@ -551,12 +551,13 @@ align -iteam -> algin iteam center cros axis
 
 /* CSS transition */
 
-.css_translation{
+.css_translation {
     background-color: antiquewhite;
     height: 50vh;
     width: 60vw;
 }
-.transaltion_button{
+
+.transaltion_button {
     background-color: red;
     height: 5vh;
     width: 6vw;
@@ -566,18 +567,20 @@ align -iteam -> algin iteam center cros axis
     transition-timing-function: ease-in-out;
     transition-delay: 1ms;
 }
-.translate{
+
+.translate {
     transform: translateX(50%) translateY(50%);
     background-color: brown;
 }
 
 /* CSS animation */
-.css_animation{
+.css_animation {
     height: 50vh;
     width: 50vw;
-    background-color:darkgoldenrod;
+    background-color: darkgoldenrod;
 }
-.animation_box{
+
+.animation_box {
     height: 10vh;
     width: 10vw;
     background-color: cadetblue;
@@ -587,31 +590,72 @@ align -iteam -> algin iteam center cros axis
     /* animation-timing-function: cubic-bezier(1, -0.05, 0, 1.01);
     animation-delay: 1s;
     animation-direction: reverse;
-    animation-play-state: paused; */ 
+    animation-play-state: paused; */
 
     /* sorthand */
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 
-    animation: first_animation 3s ease-in-out infinite alternate-reverse, 
-    second_animation 3s ease-in-out infinite 1s;
+    animation: first_animation 3s ease-in-out infinite alternate-reverse,
+        second_animation 3s ease-in-out infinite 1s;
 
 }
-@keyframes first_animation {
-    from{
 
-    }
-    to{
+@keyframes first_animation {
+    from {}
+
+    to {
         transform: translateX(1000px);
     }
 }
+
 @keyframes second_animation {
-    0%{
-        transform: rotate(50deg);   
+    0% {
+        transform: rotate(50deg);
     }
-    50%{
-         transform: rotate(100deg);
+
+    50% {
+        transform: rotate(100deg);
     }
-    100%{
-         transform: rotate(200deg);
+
+    100% {
+        transform: rotate(200deg);
     }
 }
+
+/* Object fit and object cover  */
+.object_container {
+    height: 50vh;
+    width: 50vw;
+    border: 2px solid black;
+}
+
+.object_container>img {
+    object-fit: contain;
+    /* object-fit: cover;
+    object-fit: fill;
+    object-fit: none;
+    object-fit: scale-down; */
+
+    object-position: top;
+    /* object-position: bottom;
+    object-position: left;
+    object-position: right;
+    object-position: center; */
+
+    /* u can use percentage to  */
+    /* object-position: 10% 10%; */
+}
+
+/* background image */
+.background_image{
+    /* we can use image as a baclground */
+    background-image: url(""); 
+    background-repeat: no-repeat;
+}
+
+/* CSS filters */
+.css_filter_image{
+    height: 50vh;
+    width: 50vw;
+}
+
