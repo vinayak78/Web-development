@@ -14,7 +14,7 @@
     // for only elements nodes 
     let firstElementChild = document.body.firstElementChild;
     let lastElementChild = document.body.lastElementChild;
-    console.log(firstElementChild , lastElementChild);
+    console.log(firstElementChild, lastElementChild);
 
     //for siblings 
     let prvious_sibling = document.body.previousElementSibling;
@@ -61,35 +61,110 @@
     //textContains
     let textcontent = document.querySelector("div").textContent;
     console.log(textcontent);
-    
+
     //hidden property (hide element)
     // document.querySelector("div").hidden = true;
 }
 
 //Attribute methods 
 {
-    let div = document.querySelector("div");
-   console.log(div.hasAttribute("class")); 
+    // let div = document.querySelector("div");
+    // console.log(div.hasAttribute("class"));
 
-   console.log(div.getAttribute("class"));
+    // console.log(div.getAttribute("class"));
 
-   div.setAttribute("class" , "added_class" );
-   console.log(div.attributes);
+    // div.setAttribute("class", "added_class");
+    // console.log(div.attributes);
+
+
+    //important note : setAttribute funtion reassign the original class 
 }
 
 //creating an element and insertion 
 {
-    let div = document.createElement("div");
-    div.innerText = "Hello i am created div";
-    div.className = "added_div";
+    // let div = document.createElement("div");
+    // div.innerText = "Hello i am created div";
+    // div.className = "added_div";
 
-    // document.getElementsByClassName(".container").append(div);
-    // document.getElementsByClassName(".container").prepend(div);
-    // document.getElementsByClassName(".container").after(div);
-    // document.getElementsByClassName(".container").before(div);
+    // document.getElementsByClassName("container").append(div);
+    // document.getElementsByClassName("container").prepend(div);
+    // document.getElementsByClassName("container").after(div);
+    // document.getElementsByClassName("container").before(div);
 }
 
 // insert adjesent property 
 {
-    document.getElementsByClassName("container").insertAdjacentHTML("")
+    // let element = document.createElement("div");
+    // element.innerText = "Hello i am added div";
+    // //after begin
+    // document.querySelector(".conatiner").insertAdjacentElement("afterbegin", element);
+    // //before begin
+    // document.querySelector(".conatiner").insertAdjacentElement("beforbegin", element);
+    // //after end
+    // document.querySelector(".conatiner").insertAdjacentElement("afterend", element);
+    // //before end
+    // document.querySelector(".conatiner").insertAdjacentElement("beforeend", element);
+}
+
+// class name and class list
+{
+    //     let element = document.querySelector('div');
+    //     element.classList.add("addedClass");
+    //     console.log(element.className);
+    //     element.classList.remove("addedClass");
+    //     console.log(element.className);
+}
+//Events 
+{
+    document.querySelector("#btn").addEventListener("click", () => {
+        console.log("I am clicked");
+    })
+    document.querySelector("#btn").addEventListener("click", (e) => {
+        console.log(e);
+    })
+
+    // Event bubbling
+
+    // this is event bublling for stopping it we use elementObject.stopPropagation();
+    document.querySelector(".parent").addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("Hey i am clicked , parent");
+    })
+
+    document.querySelector(".parentChild").addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("Hey i am clicked , parent Child");
+    })
+    document.querySelector(".child").addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("Hey i am clicked , child");
+    })
+    
+    // we can use remove event listener to remove the events kike this 
+    document.querySelector(".child").removeEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("Hey i am clicked , child");
+    })
+    
+    
+}
+
+//settime out and setinterval
+{
+    //set time out and setintervals use to make the event in loop like this 
+    let random_color = () => {
+        let r = Math.ceil((0 + Math.random() * 255));
+        let g = Math.ceil((0 + Math.random() * 255));
+        let b = Math.ceil((0 + Math.random() * 255));
+        return `rgb(${r}, ${g}, ${b})`
+    }
+
+    setInterval(() => {
+        document.querySelector(".parentChild").style.backgroundColor = random_color();
+    }, 1000);
+    // setTimeout(() => {
+    //     document.querySelector(".parentChild").style.backgroundColor = random_color();
+    // }, 2000);
+
+    // The main difference between settimeout and setinterval funtion setimout run ones and setinterval run in a loop
 }

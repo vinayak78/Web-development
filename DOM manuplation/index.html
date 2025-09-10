@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM manuplation</title>
+    <style>
+        .parent{
+            background-color:azure;
+            margin: 14px;
+            padding: 14px;
+            border: 2px solid black;
+            box-shadow: 2  document.querySelector(".parentChild").addEventListener("click", (e) => {px 5px 12px black;
+        }
+        .parentChild{
+             background-color:bisque;
+            margin: 14px;
+            padding: 14px;
+            border: 2px solid black;
+        }
+        .child{
+             background-color:brown;
+            margin: 14px;
+            padding: 14px;
+            border: 2px solid black;
+        }
+
+    </style>
 </head>
 <body class="body">
     <div class="container">
@@ -11,6 +33,15 @@
         <div class="boxes">box 2</div>
         <div class="boxes">box 3</div>
         <div class="boxes">box 4</div>
+    </div>
+    <button id="btn">Click me</button>
+
+    <div class="parent">
+        <div class="parentChild">
+            <div class="child">
+                Hey i am child
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
