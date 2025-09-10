@@ -585,12 +585,12 @@ align -iteam -> algin iteam center cros axis
     width: 10vw;
     background-color: cadetblue;
     /* animation: first_animation;
-    animation-duration: 2s;
+    animation-duration: 2s; */
     /* animation-iteration-count: infinite; */
     /* animation-timing-function: cubic-bezier(1, -0.05, 0, 1.01);
     animation-delay: 1s;
     animation-direction: reverse;
-    animation-play-state: paused; */
+    animation-play-state: paused;
 
     /* sorthand */
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
